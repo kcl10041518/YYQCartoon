@@ -28,6 +28,10 @@
 		66BABF2F2062441600974FC6 /* YYQTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF2E2062441600974FC6 /* YYQTabBarViewController.swift */; };
 		66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF302062443700974FC6 /* YYQNavigationViewController.swift */; };
 		66BABF332062451400974FC6 /* YYQGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF322062451400974FC6 /* YYQGuideViewController.swift */; };
+		66BABF352062571800974FC6 /* YYQApi+Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF342062571800974FC6 /* YYQApi+Observable.swift */; };
+		66BABF46206259DF00974FC6 /* YYQBookstoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF45206259DF00974FC6 /* YYQBookstoreViewController.swift */; };
+		66BABF48206259F000974FC6 /* YYQCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF47206259F000974FC6 /* YYQCategoryViewController.swift */; };
+		66BABF4A206259FC00974FC6 /* YYQMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF49206259FC00974FC6 /* YYQMeViewController.swift */; };
 		92B70D1426DE1324536E8CB4 /* Pods_YYQCartoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77F204844A92EC7B6324F1E /* Pods_YYQCartoon.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +81,10 @@
 		66BABF2E2062441600974FC6 /* YYQTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQTabBarViewController.swift; sourceTree = "<group>"; };
 		66BABF302062443700974FC6 /* YYQNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQNavigationViewController.swift; sourceTree = "<group>"; };
 		66BABF322062451400974FC6 /* YYQGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQGuideViewController.swift; sourceTree = "<group>"; };
+		66BABF342062571800974FC6 /* YYQApi+Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YYQApi+Observable.swift"; sourceTree = "<group>"; };
+		66BABF45206259DF00974FC6 /* YYQBookstoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQBookstoreViewController.swift; sourceTree = "<group>"; };
+		66BABF47206259F000974FC6 /* YYQCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQCategoryViewController.swift; sourceTree = "<group>"; };
+		66BABF49206259FC00974FC6 /* YYQMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQMeViewController.swift; sourceTree = "<group>"; };
 		6F67E540D49468831E8E0342 /* Pods-YYQCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYQCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon.debug.xcconfig"; sourceTree = "<group>"; };
 		E77F204844A92EC7B6324F1E /* Pods_YYQCartoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYQCartoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -167,6 +175,7 @@
 			isa = PBXGroup;
 			children = (
 				66BABF0D2062142700974FC6 /* YYQApi.swift */,
+				66BABF342062571800974FC6 /* YYQApi+Observable.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -185,6 +194,9 @@
 		66BABF102062198000974FC6 /* Scence */ = {
 			isa = PBXGroup;
 			children = (
+				66BABF402062599400974FC6 /* BookStore */,
+				66BABF3B2062599400974FC6 /* Category */,
+				66BABF362062599400974FC6 /* Me */,
 				66BABF112062198000974FC6 /* Homepage */,
 			);
 			path = Scence;
@@ -232,6 +244,126 @@
 			sourceTree = "<group>";
 		};
 		66BABF152062198000974FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66BABF362062599400974FC6 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF372062599400974FC6 /* ViewModel */,
+				66BABF382062599400974FC6 /* Controller */,
+				66BABF392062599400974FC6 /* Model */,
+				66BABF3A2062599400974FC6 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		66BABF372062599400974FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66BABF382062599400974FC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF49206259FC00974FC6 /* YYQMeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66BABF392062599400974FC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66BABF3A2062599400974FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66BABF3B2062599400974FC6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF3C2062599400974FC6 /* ViewModel */,
+				66BABF3D2062599400974FC6 /* Controller */,
+				66BABF3E2062599400974FC6 /* Model */,
+				66BABF3F2062599400974FC6 /* View */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		66BABF3C2062599400974FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66BABF3D2062599400974FC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF47206259F000974FC6 /* YYQCategoryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66BABF3E2062599400974FC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66BABF3F2062599400974FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		66BABF402062599400974FC6 /* BookStore */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF412062599400974FC6 /* ViewModel */,
+				66BABF422062599400974FC6 /* Controller */,
+				66BABF432062599400974FC6 /* Model */,
+				66BABF442062599400974FC6 /* View */,
+			);
+			path = BookStore;
+			sourceTree = "<group>";
+		};
+		66BABF412062599400974FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66BABF422062599400974FC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF45206259DF00974FC6 /* YYQBookstoreViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66BABF432062599400974FC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66BABF442062599400974FC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -449,13 +581,17 @@
 				66BABF172062199600974FC6 /* Config.swift in Sources */,
 				66BABF27206243C500974FC6 /* YYQRecommendViewController.swift in Sources */,
 				66BABF332062451400974FC6 /* YYQGuideViewController.swift in Sources */,
+				66BABF4A206259FC00974FC6 /* YYQMeViewController.swift in Sources */,
+				66BABF352062571800974FC6 /* YYQApi+Observable.swift in Sources */,
 				66BABF29206243DA00974FC6 /* YYQHomePageViewController.swift in Sources */,
+				66BABF46206259DF00974FC6 /* YYQBookstoreViewController.swift in Sources */,
 				66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */,
 				66BABF21206238E800974FC6 /* VipListModel.swift in Sources */,
 				66BABF23206239A100974FC6 /* RecommendList.swift in Sources */,
 				66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */,
 				66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */,
 				66BABEDF20620B8E00974FC6 /* AppDelegate.swift in Sources */,
+				66BABF48206259F000974FC6 /* YYQCategoryViewController.swift in Sources */,
 				66BABF2D2062440000974FC6 /* YYQVipListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -15,3 +15,6 @@ let ScreenHeight = UIScreen.main.bounds.size.height
 // IphoneX 适配
 let kNavigationBarHeight =  ScreenHeight == 812.0 ? 88 : 64
 let SafeAreaBottomHeight =  ScreenHeight == 812.0 ? 34 : 0
+
+//let AppMainColor = UIcolor
+

@@ -94,6 +94,7 @@ private let YYQEndpointMapping = {(target:YYQApi) -> Endpoint in
 //}
 
 
+/// 网络封装
 class YYQRequest{
 
     private static let dProvider = MoyaProvider<YYQApi>()
@@ -102,15 +103,39 @@ class YYQRequest{
 //        plugins:[RequestAlertPlugin(viewController: (UIApplication.shared.keyWindow?.rootViewController)!)]
 //        requestClosure:YYQRequestTimeoutClosure,
         )
-
-    final class func getVipList() ->Observable<VipList>{
+    //获取Vip列表
+    final class func getVipList() ->Observable<VipListModel>{
 
         return YYQProvider.rx.request(.vipList)
             .mapJSON()
             .asObservable()
-            .mapObject(type:VipList.self)
+            .mapObject(type:VipListModel.self)
+    }
+    //获取排行列表
+    final class func getRankList() ->Observable<RankListModel>{
+
+        return YYQProvider.rx.request(.rankList)
+            .mapJSON()
+            .asObservable()
+            .mapObject(type:RankListModel.self)
+    }
+    //获取推荐列表
+    final class func getRecommendList() ->Observable<RecommendListModel>{
+
+        return YYQProvider.rx.request(.boutiqueList(sexType: 1))
+            .mapJSON()
+            .asObservable()
+            .mapObject(type:RecommendListModel.self)
     }
 
+    //获取订阅列表
+    final class func getSubscribeList() ->Observable<SubscribeListModel>{
+
+        return YYQProvider.rx.request(.subscribeList)
+            .mapJSON()
+            .asObservable()
+            .mapObject(type:SubscribeListModel.self)
+    }
 
 }
 
@@ -120,11 +145,18 @@ enum YYQApi {
     case searchHot
     case searchRelative(inputText:String)   //相关搜索
     case searchResult(argCon:Int, q:String) //搜索结果
-
     case boutiqueList(sexType:Int)          //推荐列表
     case special(argCon:Int, page:Int)      //专题
     case vipList //VIP列表
     case subscribeList //订阅列表
+    case rankList//排行列表
+    case cateList//分类列表
+    case comicList(argCon: Int, argName: String, argValue: Int, page: Int)//漫画列表
+    case guessLike//猜你喜欢
+    case detailStatic(comicid: Int)//详情(基本)
+    case detailRealtime(comicid: Int)//详情(实时)
+    case commentList(object_id: Int, thread_id: Int, page: Int)//评论
+    case chapter(chapter_id: Int)//章节内容
 }
 
 extension YYQApi:TargetType
@@ -144,11 +176,18 @@ extension YYQApi:TargetType
         case .searchHot: return "search/hotkeywordsnew"
         case .searchRelative: return "search/relative"
         case .searchResult: return "search/searchResult"
-
         case .boutiqueList: return "comic/boutiqueListNew"
         case .special: return "comic/special"
         case .vipList: return "list/vipList"
         case .subscribeList: return "list/newSubscribeList"
+        case .rankList: return "rank/list"
+        case .cateList: return "sort/mobileCateList"
+        case .comicList: return "list/commonComicList"
+        case .guessLike: return "comic/guessLike"
+        case .detailStatic: return "comic/detail_static_new"
+        case .detailRealtime: return "comic/detail_realtime"
+        case .commentList: return "comment/list"
+        case .chapter: return "comic/chapterNew"
 
         }
     }
@@ -180,7 +219,28 @@ extension YYQApi:TargetType
             case .special(let argCon,let page):
                 parameters["argCon"] = argCon
                 parameters["page"] = max(1, page)
-            default:break
+            case .cateList:
+                parameters["v"] = 2
+
+            case .comicList(let argCon, let argName, let argValue, let page):
+                parameters["argCon"] = argCon
+                if argName.count > 0 { parameters["argName"] = argName }
+                parameters["argValue"] = argValue
+                parameters["page"] = max(1, page)
+
+            case .detailStatic(let comicid),
+                 .detailRealtime(let comicid):
+                parameters["comicid"] = comicid
+                parameters["v"] = 3320101
+
+            case .commentList(let object_id, let thread_id, let page):
+                parameters["object_id"] = object_id
+                parameters["thread_id"] = thread_id
+                parameters["page"] = page
+
+            case .chapter(let chapter_id):
+                parameters["chapter_id"] = chapter_id
+                default:break
         }
 
         return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
@@ -193,90 +253,6 @@ extension YYQApi:TargetType
 
 
 
-enum RxSwiftMoyaError:String {
-
-    case ParseJSONError
-    case OtherError
-}
-extension RxSwiftMoyaError:Swift.Error{}
-
-extension Observable {
-
-    public func mapObject<T:Mappable>(type:T.Type) -> Observable<T> {
-
-        return self.map{ response in
-
-            //if response is a dictionary, then use ObjectMapper to map the dictionary
-            //if not throw an error
-            guard let dict = response as? [String:Any] else {
-
-                throw RxSwiftMoyaError.ParseJSONError
-            }
-            if let error = self.parseError(response: dict){
-                throw error
-            }
-            print("response=\(dict)")
-            return Mapper<T>().map(JSON: dict)!
-        }
-    }
-    public func mapArray<T:Mappable>(type:T.Type) ->Observable<[T]>{
-
-        return self.map{ response in
-
-            guard let array = response as? [[String:Any]] else{
-
-                throw RxSwiftMoyaError.ParseJSONError
-            }
-
-            for dict:[String :Any] in array {
-
-                if let error = self.parseError(response: dict){
-
-                    throw error
-                }
-            }
-            return Mapper<T>().mapArray(JSONArray: array)
-        }
-    }
-
-    final fileprivate func parseError(response:[String :Any]?) -> NSError?{
-
-        var error:NSError?
-
-        if let value = response{
-            var code:Int?
-            var msg:String?
-
-            if let errorDic = value["error"] as? [String:Any]{
-
-                code = errorDic["code"] as? Int
-                msg = errorDic["msg"] as? String
-                error = NSError(domain: "Network", code: code!, userInfo: [NSLocalizedDescriptionKey:msg ?? ""])
-            }
-        }
-        return error
-    }
-
-    final fileprivate func parseServerError() -> Observable {
-
-        return self.map{ (response) in
-
-            let name = type(of: response)
-            print(name)
-
-            guard let dict = response as? [String:Any] else {
-
-                throw RxSwiftMoyaError.ParseJSONError
-            }
-            if let error = self.parseError(response: dict){
-                throw error
-            }
-            return self as! Element
-        }
-    }
-
-
-}
 
 
 
