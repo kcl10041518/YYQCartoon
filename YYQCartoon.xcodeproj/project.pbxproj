@@ -1,0 +1,761 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66BABEDF20620B8E00974FC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABEDE20620B8E00974FC6 /* AppDelegate.swift */; };
+		66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABEE020620B8E00974FC6 /* ViewController.swift */; };
+		66BABEE420620B8E00974FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BABEE220620B8E00974FC6 /* Main.storyboard */; };
+		66BABEE620620B8E00974FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66BABEE520620B8E00974FC6 /* Assets.xcassets */; };
+		66BABEE920620B8E00974FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66BABEE720620B8E00974FC6 /* LaunchScreen.storyboard */; };
+		66BABEF420620B8E00974FC6 /* YYQCartoonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABEF320620B8E00974FC6 /* YYQCartoonTests.swift */; };
+		66BABEFF20620B8E00974FC6 /* YYQCartoonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABEFE20620B8E00974FC6 /* YYQCartoonUITests.swift */; };
+		66BABF0E2062142700974FC6 /* YYQApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF0D2062142700974FC6 /* YYQApi.swift */; };
+		66BABF172062199600974FC6 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF162062199600974FC6 /* Config.swift */; };
+		66BABF1B206237EE00974FC6 /* SubscribeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF1A206237EE00974FC6 /* SubscribeListModel.swift */; };
+		66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF1C2062381F00974FC6 /* RankListModel.swift */; };
+		66BABF21206238E800974FC6 /* VipListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF20206238E800974FC6 /* VipListModel.swift */; };
+		66BABF23206239A100974FC6 /* RecommendList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF22206239A100974FC6 /* RecommendList.swift */; };
+		66BABF25206243B700974FC6 /* YYQSubscribeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF24206243B700974FC6 /* YYQSubscribeViewController.swift */; };
+		66BABF27206243C500974FC6 /* YYQRecommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF26206243C500974FC6 /* YYQRecommendViewController.swift */; };
+		66BABF29206243DA00974FC6 /* YYQHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF28206243DA00974FC6 /* YYQHomePageViewController.swift */; };
+		66BABF2B206243F400974FC6 /* YYQRankListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF2A206243F400974FC6 /* YYQRankListViewController.swift */; };
+		66BABF2D2062440000974FC6 /* YYQVipListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF2C2062440000974FC6 /* YYQVipListViewController.swift */; };
+		66BABF2F2062441600974FC6 /* YYQTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF2E2062441600974FC6 /* YYQTabBarViewController.swift */; };
+		66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF302062443700974FC6 /* YYQNavigationViewController.swift */; };
+		66BABF332062451400974FC6 /* YYQGuideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66BABF322062451400974FC6 /* YYQGuideViewController.swift */; };
+		92B70D1426DE1324536E8CB4 /* Pods_YYQCartoon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E77F204844A92EC7B6324F1E /* Pods_YYQCartoon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66BABEF020620B8E00974FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66BABED320620B8E00974FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66BABEDA20620B8E00974FC6;
+			remoteInfo = YYQCartoon;
+		};
+		66BABEFB20620B8E00974FC6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66BABED320620B8E00974FC6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66BABEDA20620B8E00974FC6;
+			remoteInfo = YYQCartoon;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09B0AE975199AEB10D89996E /* Pods-YYQCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYQCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon.release.xcconfig"; sourceTree = "<group>"; };
+		66BABEDB20620B8E00974FC6 /* YYQCartoon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YYQCartoon.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BABEDE20620B8E00974FC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66BABEE020620B8E00974FC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66BABEE320620B8E00974FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66BABEE520620B8E00974FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66BABEE820620B8E00974FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66BABEEA20620B8E00974FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66BABEEF20620B8E00974FC6 /* YYQCartoonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYQCartoonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BABEF320620B8E00974FC6 /* YYQCartoonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQCartoonTests.swift; sourceTree = "<group>"; };
+		66BABEF520620B8E00974FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66BABEFA20620B8E00974FC6 /* YYQCartoonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYQCartoonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		66BABEFE20620B8E00974FC6 /* YYQCartoonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQCartoonUITests.swift; sourceTree = "<group>"; };
+		66BABF0020620B8E00974FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66BABF0D2062142700974FC6 /* YYQApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQApi.swift; sourceTree = "<group>"; };
+		66BABF162062199600974FC6 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		66BABF1A206237EE00974FC6 /* SubscribeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeListModel.swift; sourceTree = "<group>"; };
+		66BABF1C2062381F00974FC6 /* RankListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankListModel.swift; sourceTree = "<group>"; };
+		66BABF20206238E800974FC6 /* VipListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VipListModel.swift; sourceTree = "<group>"; };
+		66BABF22206239A100974FC6 /* RecommendList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendList.swift; sourceTree = "<group>"; };
+		66BABF24206243B700974FC6 /* YYQSubscribeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSubscribeViewController.swift; sourceTree = "<group>"; };
+		66BABF26206243C500974FC6 /* YYQRecommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQRecommendViewController.swift; sourceTree = "<group>"; };
+		66BABF28206243DA00974FC6 /* YYQHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQHomePageViewController.swift; sourceTree = "<group>"; };
+		66BABF2A206243F400974FC6 /* YYQRankListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQRankListViewController.swift; sourceTree = "<group>"; };
+		66BABF2C2062440000974FC6 /* YYQVipListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQVipListViewController.swift; sourceTree = "<group>"; };
+		66BABF2E2062441600974FC6 /* YYQTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQTabBarViewController.swift; sourceTree = "<group>"; };
+		66BABF302062443700974FC6 /* YYQNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQNavigationViewController.swift; sourceTree = "<group>"; };
+		66BABF322062451400974FC6 /* YYQGuideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQGuideViewController.swift; sourceTree = "<group>"; };
+		6F67E540D49468831E8E0342 /* Pods-YYQCartoon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYQCartoon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon.debug.xcconfig"; sourceTree = "<group>"; };
+		E77F204844A92EC7B6324F1E /* Pods_YYQCartoon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YYQCartoon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66BABED820620B8E00974FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92B70D1426DE1324536E8CB4 /* Pods_YYQCartoon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEEC20620B8E00974FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEF720620B8E00974FC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66BABED220620B8E00974FC6 = {
+			isa = PBXGroup;
+			children = (
+				66BABEDD20620B8E00974FC6 /* YYQCartoon */,
+				66BABEF220620B8E00974FC6 /* YYQCartoonTests */,
+				66BABEFD20620B8E00974FC6 /* YYQCartoonUITests */,
+				66BABEDC20620B8E00974FC6 /* Products */,
+				842013221D0C7A992360475E /* Pods */,
+				BF3683C879DE52084B5DAF0D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		66BABEDC20620B8E00974FC6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66BABEDB20620B8E00974FC6 /* YYQCartoon.app */,
+				66BABEEF20620B8E00974FC6 /* YYQCartoonTests.xctest */,
+				66BABEFA20620B8E00974FC6 /* YYQCartoonUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66BABEDD20620B8E00974FC6 /* YYQCartoon */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF102062198000974FC6 /* Scence */,
+				66BABF0F2062191500974FC6 /* Common */,
+				66BABF0C2062140900974FC6 /* API */,
+				66BABEDE20620B8E00974FC6 /* AppDelegate.swift */,
+				66BABEE020620B8E00974FC6 /* ViewController.swift */,
+				66BABEE220620B8E00974FC6 /* Main.storyboard */,
+				66BABEE520620B8E00974FC6 /* Assets.xcassets */,
+				66BABEE720620B8E00974FC6 /* LaunchScreen.storyboard */,
+				66BABEEA20620B8E00974FC6 /* Info.plist */,
+			);
+			path = YYQCartoon;
+			sourceTree = "<group>";
+		};
+		66BABEF220620B8E00974FC6 /* YYQCartoonTests */ = {
+			isa = PBXGroup;
+			children = (
+				66BABEF320620B8E00974FC6 /* YYQCartoonTests.swift */,
+				66BABEF520620B8E00974FC6 /* Info.plist */,
+			);
+			path = YYQCartoonTests;
+			sourceTree = "<group>";
+		};
+		66BABEFD20620B8E00974FC6 /* YYQCartoonUITests */ = {
+			isa = PBXGroup;
+			children = (
+				66BABEFE20620B8E00974FC6 /* YYQCartoonUITests.swift */,
+				66BABF0020620B8E00974FC6 /* Info.plist */,
+			);
+			path = YYQCartoonUITests;
+			sourceTree = "<group>";
+		};
+		66BABF0C2062140900974FC6 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF0D2062142700974FC6 /* YYQApi.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		66BABF0F2062191500974FC6 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF162062199600974FC6 /* Config.swift */,
+				66BABF2E2062441600974FC6 /* YYQTabBarViewController.swift */,
+				66BABF302062443700974FC6 /* YYQNavigationViewController.swift */,
+				66BABF322062451400974FC6 /* YYQGuideViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		66BABF102062198000974FC6 /* Scence */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF112062198000974FC6 /* Homepage */,
+			);
+			path = Scence;
+			sourceTree = "<group>";
+		};
+		66BABF112062198000974FC6 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF122062198000974FC6 /* ViewModel */,
+				66BABF132062198000974FC6 /* Controller */,
+				66BABF142062198000974FC6 /* Model */,
+				66BABF152062198000974FC6 /* View */,
+			);
+			path = Homepage;
+			sourceTree = "<group>";
+		};
+		66BABF122062198000974FC6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		66BABF132062198000974FC6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF24206243B700974FC6 /* YYQSubscribeViewController.swift */,
+				66BABF26206243C500974FC6 /* YYQRecommendViewController.swift */,
+				66BABF28206243DA00974FC6 /* YYQHomePageViewController.swift */,
+				66BABF2A206243F400974FC6 /* YYQRankListViewController.swift */,
+				66BABF2C2062440000974FC6 /* YYQVipListViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66BABF142062198000974FC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66BABF1A206237EE00974FC6 /* SubscribeListModel.swift */,
+				66BABF22206239A100974FC6 /* RecommendList.swift */,
+				66BABF1C2062381F00974FC6 /* RankListModel.swift */,
+				66BABF20206238E800974FC6 /* VipListModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66BABF152062198000974FC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		842013221D0C7A992360475E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6F67E540D49468831E8E0342 /* Pods-YYQCartoon.debug.xcconfig */,
+				09B0AE975199AEB10D89996E /* Pods-YYQCartoon.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BF3683C879DE52084B5DAF0D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E77F204844A92EC7B6324F1E /* Pods_YYQCartoon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66BABEDA20620B8E00974FC6 /* YYQCartoon */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66BABF0320620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoon" */;
+			buildPhases = (
+				DED560CA8E2FCE148D9A33B9 /* [CP] Check Pods Manifest.lock */,
+				66BABED720620B8E00974FC6 /* Sources */,
+				66BABED820620B8E00974FC6 /* Frameworks */,
+				66BABED920620B8E00974FC6 /* Resources */,
+				90880F31ADF1F6ED7B38D8D4 /* [CP] Embed Pods Frameworks */,
+				131596E20A92E4A28B25E4EC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYQCartoon;
+			productName = YYQCartoon;
+			productReference = 66BABEDB20620B8E00974FC6 /* YYQCartoon.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66BABEEE20620B8E00974FC6 /* YYQCartoonTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66BABF0620620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoonTests" */;
+			buildPhases = (
+				66BABEEB20620B8E00974FC6 /* Sources */,
+				66BABEEC20620B8E00974FC6 /* Frameworks */,
+				66BABEED20620B8E00974FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66BABEF120620B8E00974FC6 /* PBXTargetDependency */,
+			);
+			name = YYQCartoonTests;
+			productName = YYQCartoonTests;
+			productReference = 66BABEEF20620B8E00974FC6 /* YYQCartoonTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		66BABEF920620B8E00974FC6 /* YYQCartoonUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66BABF0920620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoonUITests" */;
+			buildPhases = (
+				66BABEF620620B8E00974FC6 /* Sources */,
+				66BABEF720620B8E00974FC6 /* Frameworks */,
+				66BABEF820620B8E00974FC6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66BABEFC20620B8E00974FC6 /* PBXTargetDependency */,
+			);
+			name = YYQCartoonUITests;
+			productName = YYQCartoonUITests;
+			productReference = 66BABEFA20620B8E00974FC6 /* YYQCartoonUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66BABED320620B8E00974FC6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = YYQ;
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = KCL;
+				TargetAttributes = {
+					66BABEDA20620B8E00974FC6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					66BABEEE20620B8E00974FC6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66BABEDA20620B8E00974FC6;
+					};
+					66BABEF920620B8E00974FC6 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 66BABEDA20620B8E00974FC6;
+					};
+				};
+			};
+			buildConfigurationList = 66BABED620620B8E00974FC6 /* Build configuration list for PBXProject "YYQCartoon" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66BABED220620B8E00974FC6;
+			productRefGroup = 66BABEDC20620B8E00974FC6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66BABEDA20620B8E00974FC6 /* YYQCartoon */,
+				66BABEEE20620B8E00974FC6 /* YYQCartoonTests */,
+				66BABEF920620B8E00974FC6 /* YYQCartoonUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66BABED920620B8E00974FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BABEE920620B8E00974FC6 /* LaunchScreen.storyboard in Resources */,
+				66BABEE620620B8E00974FC6 /* Assets.xcassets in Resources */,
+				66BABEE420620B8E00974FC6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEED20620B8E00974FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEF820620B8E00974FC6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		131596E20A92E4A28B25E4EC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		90880F31ADF1F6ED7B38D8D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DED560CA8E2FCE148D9A33B9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66BABED720620B8E00974FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BABF2B206243F400974FC6 /* YYQRankListViewController.swift in Sources */,
+				66BABF25206243B700974FC6 /* YYQSubscribeViewController.swift in Sources */,
+				66BABF1B206237EE00974FC6 /* SubscribeListModel.swift in Sources */,
+				66BABF0E2062142700974FC6 /* YYQApi.swift in Sources */,
+				66BABF2F2062441600974FC6 /* YYQTabBarViewController.swift in Sources */,
+				66BABF172062199600974FC6 /* Config.swift in Sources */,
+				66BABF27206243C500974FC6 /* YYQRecommendViewController.swift in Sources */,
+				66BABF332062451400974FC6 /* YYQGuideViewController.swift in Sources */,
+				66BABF29206243DA00974FC6 /* YYQHomePageViewController.swift in Sources */,
+				66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */,
+				66BABF21206238E800974FC6 /* VipListModel.swift in Sources */,
+				66BABF23206239A100974FC6 /* RecommendList.swift in Sources */,
+				66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */,
+				66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */,
+				66BABEDF20620B8E00974FC6 /* AppDelegate.swift in Sources */,
+				66BABF2D2062440000974FC6 /* YYQVipListViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEEB20620B8E00974FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BABEF420620B8E00974FC6 /* YYQCartoonTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66BABEF620620B8E00974FC6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66BABEFF20620B8E00974FC6 /* YYQCartoonUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66BABEF120620B8E00974FC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66BABEDA20620B8E00974FC6 /* YYQCartoon */;
+			targetProxy = 66BABEF020620B8E00974FC6 /* PBXContainerItemProxy */;
+		};
+		66BABEFC20620B8E00974FC6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66BABEDA20620B8E00974FC6 /* YYQCartoon */;
+			targetProxy = 66BABEFB20620B8E00974FC6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66BABEE220620B8E00974FC6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66BABEE320620B8E00974FC6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66BABEE720620B8E00974FC6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66BABEE820620B8E00974FC6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66BABF0120620B8E00974FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66BABF0220620B8E00974FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66BABF0420620B8E00974FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F67E540D49468831E8E0342 /* Pods-YYQCartoon.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66BABF0520620B8E00974FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09B0AE975199AEB10D89996E /* Pods-YYQCartoon.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoon/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoon;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		66BABF0720620B8E00974FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYQCartoon.app/YYQCartoon";
+			};
+			name = Debug;
+		};
+		66BABF0820620B8E00974FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoonTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoonTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YYQCartoon.app/YYQCartoon";
+			};
+			name = Release;
+		};
+		66BABF0A20620B8E00974FC6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYQCartoon;
+			};
+			name = Debug;
+		};
+		66BABF0B20620B8E00974FC6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HX6A523YNU;
+				INFOPLIST_FILE = YYQCartoonUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kcl.YYQCartoonUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = YYQCartoon;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66BABED620620B8E00974FC6 /* Build configuration list for PBXProject "YYQCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66BABF0120620B8E00974FC6 /* Debug */,
+				66BABF0220620B8E00974FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66BABF0320620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoon" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66BABF0420620B8E00974FC6 /* Debug */,
+				66BABF0520620B8E00974FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66BABF0620620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoonTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66BABF0720620B8E00974FC6 /* Debug */,
+				66BABF0820620B8E00974FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66BABF0920620B8E00974FC6 /* Build configuration list for PBXNativeTarget "YYQCartoonUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66BABF0A20620B8E00974FC6 /* Debug */,
+				66BABF0B20620B8E00974FC6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66BABED320620B8E00974FC6 /* Project object */;
+}
