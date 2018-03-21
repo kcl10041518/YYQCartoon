@@ -9,12 +9,12 @@
 import Foundation
 import UIKit
 
-let ScreenWidth = UIScreen.main.bounds.size.width
-let ScreenHeight = UIScreen.main.bounds.size.height
+let ScreenWidth:CGFloat = UIScreen.main.bounds.size.width
+let ScreenHeight:CGFloat = UIScreen.main.bounds.size.height
 
 // IphoneX 适配
-let kNavigationBarHeight =  ScreenHeight == 812.0 ? 88 : 64
-let SafeAreaBottomHeight =  ScreenHeight == 812.0 ? 34 : 0
+let kNavigationBarHeight:CGFloat =  ScreenHeight == 812.0 ? 88 : 64
+let SafeAreaBottomHeight:CGFloat =  ScreenHeight == 812.0 ? 34 : 0
 
 //let AppMainColor = UIcolor
 

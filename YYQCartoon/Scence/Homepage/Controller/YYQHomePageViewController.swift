@@ -9,16 +9,28 @@
 import UIKit
 
 class YYQHomePageViewController: UIViewController {
-
+    
+    
+    lazy var segment: UISegmentedControl = {
+        let segment = UISegmentedControl()
+        
+        return segment
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let segCtr = YYQSegmentViewController()
         let vipListCtr = YYQVipListViewController()
         let rankListCtr = YYQRankListViewController()
         let recmdCtr = YYQRecommendViewController()
         let subCtr = YYQSubscribeViewController()
-
-        self.addChildViewController(vipListCtr)
+        let items = ["推荐","VIP","订阅","排行"]
+        let childCtrs = [ recmdCtr, vipListCtr, subCtr,rankListCtr]
+        
+        segCtr.setUpWithItems(items: items, childVCtrs: childCtrs)
+        self.addChildViewController(segCtr)
+        self.view.addSubview(segCtr.view)
 
 //        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
