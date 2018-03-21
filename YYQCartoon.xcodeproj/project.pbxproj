@@ -223,9 +223,9 @@
 		66BABF132062198000974FC6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				66BABF28206243DA00974FC6 /* YYQHomePageViewController.swift */,
 				66BABF24206243B700974FC6 /* YYQSubscribeViewController.swift */,
 				66BABF26206243C500974FC6 /* YYQRecommendViewController.swift */,
-				66BABF28206243DA00974FC6 /* YYQHomePageViewController.swift */,
 				66BABF2A206243F400974FC6 /* YYQRankListViewController.swift */,
 				66BABF2C2062440000974FC6 /* YYQVipListViewController.swift */,
 			);

@@ -12,6 +12,14 @@ class YYQHomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        let vipListCtr = YYQVipListViewController()
+        let rankListCtr = YYQRankListViewController()
+        let recmdCtr = YYQRecommendViewController()
+        let subCtr = YYQSubscribeViewController()
+
+        self.addChildViewController(vipListCtr)
+
 //        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
     }
