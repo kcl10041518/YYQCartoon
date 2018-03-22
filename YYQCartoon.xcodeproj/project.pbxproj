@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6602C0EB206393F700150681 /* YYQSubscribeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C0E9206393F700150681 /* YYQSubscribeViewCell.swift */; };
+		6602C0EC206393F700150681 /* YYQSubscribeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6602C0EA206393F700150681 /* YYQSubscribeViewCell.xib */; };
+		6602C0F12063ACC100150681 /* YYQSubscribeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */; };
+		6602C0F22063ACC100150681 /* YYQSubscribeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */; };
 		6619A5D02062845400709E8F /* YYQSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */; };
 		668B7CF820633AAE0037D5C4 /* YYQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */; };
 		668B7CFB206346C80037D5C4 /* YYQSegmentBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CFA206346C80037D5C4 /* YYQSegmentBarView.swift */; };
@@ -62,6 +66,10 @@
 
 /* Begin PBXFileReference section */
 		09B0AE975199AEB10D89996E /* Pods-YYQCartoon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YYQCartoon.release.xcconfig"; path = "Pods/Target Support Files/Pods-YYQCartoon/Pods-YYQCartoon.release.xcconfig"; sourceTree = "<group>"; };
+		6602C0E9206393F700150681 /* YYQSubscribeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSubscribeViewCell.swift; sourceTree = "<group>"; };
+		6602C0EA206393F700150681 /* YYQSubscribeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYQSubscribeViewCell.xib; sourceTree = "<group>"; };
+		6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSubscribeCollectionViewCell.swift; sourceTree = "<group>"; };
+		6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYQSubscribeCollectionViewCell.xib; sourceTree = "<group>"; };
 		6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSegmentViewController.swift; sourceTree = "<group>"; };
 		668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQBaseViewController.swift; sourceTree = "<group>"; };
 		668B7CFA206346C80037D5C4 /* YYQSegmentBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSegmentBarView.swift; sourceTree = "<group>"; };
@@ -136,6 +144,10 @@
 			children = (
 				668B7CFA206346C80037D5C4 /* YYQSegmentBarView.swift */,
 				668B7D05206375590037D5C4 /* YYQRankListViewCell.swift */,
+				6602C0E9206393F700150681 /* YYQSubscribeViewCell.swift */,
+				6602C0EA206393F700150681 /* YYQSubscribeViewCell.xib */,
+				6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */,
+				6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -523,6 +535,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				66BABEE920620B8E00974FC6 /* LaunchScreen.storyboard in Resources */,
+				6602C0EC206393F700150681 /* YYQSubscribeViewCell.xib in Resources */,
+				6602C0F22063ACC100150681 /* YYQSubscribeCollectionViewCell.xib in Resources */,
 				66BABEE620620B8E00974FC6 /* Assets.xcassets in Resources */,
 				66BABEE420620B8E00974FC6 /* Main.storyboard in Resources */,
 			);
@@ -640,7 +654,9 @@
 				66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */,
 				66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */,
 				66BABEDF20620B8E00974FC6 /* AppDelegate.swift in Sources */,
+				6602C0EB206393F700150681 /* YYQSubscribeViewCell.swift in Sources */,
 				668B7D0120636D650037D5C4 /* YYQBookListViewController.swift in Sources */,
+				6602C0F12063ACC100150681 /* YYQSubscribeCollectionViewCell.swift in Sources */,
 				66BABF48206259F000974FC6 /* YYQCategoryViewController.swift in Sources */,
 				66BABF2D2062440000974FC6 /* YYQVipListViewController.swift in Sources */,
 			);

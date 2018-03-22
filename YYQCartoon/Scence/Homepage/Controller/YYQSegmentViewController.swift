@@ -22,14 +22,14 @@ class YYQSegmentViewController: YYQBaseViewController {
         contentView.isPagingEnabled = true
         contentView.bounces = false
         contentView.showsVerticalScrollIndicator = false
-        contentView.showsHorizontalScrollIndicator = true
+        contentView.showsHorizontalScrollIndicator = false
         return contentView
     }()
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.white
+      
 
         if #available(iOS 11.0, *)  {
 
@@ -55,9 +55,9 @@ class YYQSegmentViewController: YYQBaseViewController {
     ///   - childVCtrs: 字控制器
     func setUpWithChildViewController(childVCtrs:Array<UIViewController>)  {
         
-        self.contentView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: CGFloat(ScreenHeight))
+        self.contentView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: CGFloat(ScreenHeight-kNavigationBarHeight-SafeAreaBottomHeight-49))
         self.view.addSubview(self.contentView)
-        self.contentView.contentSize = CGSize(width: ScreenWidth*CGFloat(childVCtrs.count), height: ScreenHeight)
+        self.contentView.contentSize = CGSize(width: ScreenWidth*CGFloat(childVCtrs.count), height: ScreenHeight-kNavigationBarHeight-SafeAreaBottomHeight-49)
         
         for vc:UIViewController in childVCtrs {
             self.addChildViewController(vc)
@@ -76,7 +76,7 @@ class YYQSegmentViewController: YYQBaseViewController {
             return;
         }
         let vcCtr = self.childViewControllers[index]
-        vcCtr.view.frame = CGRect(x: ScreenWidth*CGFloat(index), y: 0, width: ScreenWidth, height: ScreenHeight)
+        vcCtr.view.frame = CGRect(x: ScreenWidth*CGFloat(index), y: 0, width: ScreenWidth, height: self.contentView.frame.size.height)
 
         self.contentView.addSubview(vcCtr.view)
         self.contentView.setContentOffset(CGPoint(x:ScreenWidth*CGFloat(index),y: 0), animated: true)
