@@ -4,17 +4,20 @@ target ‘YYQCartoon’ do
 
   use_frameworks!
 	
-	pod 'RxSwift'
-	pod 'RxCocoa'
-	pod 'Moya/RxSwift'
-	pod 'ObjectMapper'
-    pod 'SnapKit'
-    #Installing Alamofire (4.7.0)
-    #Installing Moya (11.0.1)
-    #Installing ObjectMapper (3.1.0)
-    #Installing Result (3.2.4)
-    #Installing RxCocoa (4.1.2)
-    #Installing RxSwift (4.1.2)
-    #Installing SnapKit (4.0.0)
+	pod 'RxSwift'       , '~> 4.1.2'
+	pod 'RxCocoa'       , '~> 4.1.2'
+
+    #https://github.com/Moya/Moya
+	pod 'Moya/RxSwift'  , '~> 11.0'
+	pod 'ObjectMapper'  , '~> 3.1.0'
+
+    # Swift Masonry
+    pod 'SnapKit'       , '~> 4.0.0'
+    pod 'Then'          #, '~> 4.1.2'
+    pod 'RxDataSources' , '~> 3.0.2'
+    # Swift SDWebImage
+    pod 'Kingfisher'    , '~> 4.6.3'
+#    pod 'RxRealm'       #, '~> 4.1.2  (4.6.3)'
+
 
 end

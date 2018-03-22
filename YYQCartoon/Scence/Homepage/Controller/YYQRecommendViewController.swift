@@ -8,11 +8,12 @@
 
 import UIKit
 
-class YYQRecommendViewController: UIViewController {
+class YYQRecommendViewController: YYQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
+        print("YYQRecommendViewController")
         // Do any additional setup after loading the view.
     }
 

@@ -8,11 +8,19 @@
 
 import UIKit
 
-class YYQCategoryViewController: UIViewController {
+class YYQCategoryViewController: YYQSegmentViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+
+        let items = ["收藏","书单","下载"]
+        let childCtrs = [ YYQCollectViewController(),
+                         YYQBookListViewController(),
+                         YYQDownloadViewController()]
+
+        setUpWithChildViewController(childVCtrs: childCtrs)
+        segmentBar.setUpItems(items: items)
         // Do any additional setup after loading the view.
     }
 

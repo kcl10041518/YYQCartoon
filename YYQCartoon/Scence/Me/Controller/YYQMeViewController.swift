@@ -8,13 +8,18 @@
 
 import UIKit
 
-class YYQMeViewController: UIViewController {
+class YYQMeViewController: YYQBaseViewController {
 
-    
+    override func viewWillAppear(_ animated: Bool) {
+
+        super.viewWillAppear(animated)
+        setNavigationIsTranslucent(isTranslucent: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+
         // Do any additional setup after loading the view.
     }
 

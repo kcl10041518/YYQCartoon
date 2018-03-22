@@ -7,12 +7,57 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+import RxDataSources
+import Kingfisher
 
-class YYQRankListViewController: UIViewController {
+
+class YYQRankListViewController: YYQBaseViewController {
+
+
+    let disposeBag = DisposeBag()
+
+    let rankListObservable = Variable<[Rank]>([])
+
+    private let tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.green
+
+        self.tableView.frame = self.view.bounds
+        self.tableView.backgroundColor = UIColor.lightGray
+        self.view.addSubview(self.tableView)
+        tableView.tableFooterView = UIView.init()
+        tableView.rowHeight = 120
+        tableView.register(YYQRankListViewCell.classForCoder(), forCellReuseIdentifier: "YYQRankListViewCell")
+        tableView.rx.setDelegate(self).disposed(by: disposeBag)
+
+
+        YYQRequest.getRankList()
+            .subscribe(onNext: { (model) in
+
+                self.rankListObservable.value = (model.data?.returnData?.rankinglist)!
+                
+            }).disposed(by: disposeBag)
+
+        rankListObservable.asObservable()
+            .bind(to: tableView.rx.items(cellIdentifier: "YYQRankListViewCell", cellType: YYQRankListViewCell.self)){ (row ,model ,cell) in
+
+                cell.iconImageView.kf.setImage(with: ImageResource(downloadURL: URL.init(string: model.cover!)!),
+                                               placeholder: UIImage(named:"normal_placeholder_h"),
+                                               options: nil,
+                                               progressBlock: nil,
+                                               completionHandler: nil)
+                cell.titleLabel?.text = model.title!
+                cell.subtitleLabel.text = model.subTitle!
+
+        }.disposed(by: disposeBag)
+
+
+
+
+
         // Do any additional setup after loading the view.
     }
 
@@ -31,5 +76,17 @@ class YYQRankListViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
+
+
+
+extension YYQRankListViewController:UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 
 }

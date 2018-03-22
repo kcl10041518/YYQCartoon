@@ -19,12 +19,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        YYQRequest.getVipList()
-            .subscribe(onNext: { (model) in
-
-                print(model)
-
-            }).disposed(by: disposeBag)
+        
     }
 
     override func didReceiveMemoryWarning() {

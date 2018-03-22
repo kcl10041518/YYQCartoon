@@ -28,7 +28,7 @@ extension Observable {
             if let error = self.parseError(response: dict){
                 throw error
             }
-//            print("response=\(dict)")
+            print("response=\(dict)")
             return Mapper<T>().map(JSON: dict)!
         }
     }

@@ -8,11 +8,12 @@
 
 import UIKit
 
-class YYQVipListViewController: UIViewController {
+class YYQVipListViewController: YYQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.yellow
+        print("YYQVipListViewController")
         // Do any additional setup after loading the view.
     }
 

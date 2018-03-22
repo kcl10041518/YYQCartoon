@@ -8,11 +8,12 @@
 
 import UIKit
 
-class YYQSubscribeViewController: UIViewController {
+class YYQSubscribeViewController: YYQBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.blue
+        print("YYQSubscribeViewController")
         // Do any additional setup after loading the view.
     }
 

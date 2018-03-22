@@ -8,48 +8,68 @@
 
 import UIKit
 
-class YYQSegmentViewController: UIViewController {
+class YYQSegmentViewController: YYQBaseViewController {
 
-    lazy var items: NSMutableArray = {
-        let items = NSMutableArray()
-        return items
+
+    lazy var segmentBar: YYQSegmentBarView = {
+        let segmentBar = YYQSegmentBarView()
+        return segmentBar
     }()
+
     lazy var contentView: UIScrollView = {
         let contentView = UIScrollView()
         contentView.delegate = self
         contentView.isPagingEnabled = true
+        contentView.bounces = false
         contentView.showsVerticalScrollIndicator = false
         contentView.showsHorizontalScrollIndicator = true
         return contentView
     }()
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
+
+        if #available(iOS 11.0, *)  {
+
+            self.contentView.contentInsetAdjustmentBehavior = .never
+        }else {
+
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
         //默认显示第一个控制器
-       
+        segmentBar.delegate = self
+        segmentBar.frame = CGRect(x: 0, y: 0, width: 300, height: 40)
+        segmentBar.backgroundColor = UIColor.clear
+
+        self.navigationItem.titleView = self.segmentBar
         
         // Do any additional setup after loading the view.
     }
 
-    public func setUpWithItems(items:Array<Any>, childVCtrs:Array<UIViewController>)  {
+   
+    /// scroller + ViewController
+    ///
+    /// - Parameters:
+    ///   - childVCtrs: 字控制器
+    func setUpWithChildViewController(childVCtrs:Array<UIViewController>)  {
         
         self.contentView.frame = CGRect(x: 0, y: 0, width: ScreenWidth, height: CGFloat(ScreenHeight))
         self.view.addSubview(self.contentView)
-        self.contentView.contentSize = CGSize(width: ScreenWidth*CGFloat(items.count), height: ScreenHeight)
+        self.contentView.contentSize = CGSize(width: ScreenWidth*CGFloat(childVCtrs.count), height: ScreenHeight)
         
         for vc:UIViewController in childVCtrs {
             self.addChildViewController(vc)
-//            self.contentView.addSubview(vc.view)
         }
-         showChildVCView(index: 0)
+
+        showChildVCView(index: 0)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
+
+
+    /// 显示当前控制器
+    ///
+    /// - Parameter index: 第几个控制器
     func showChildVCView(index:Int)  {
         
         if self.childViewControllers.count == 0 {
@@ -63,6 +83,11 @@ class YYQSegmentViewController: UIViewController {
 
     }
 
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     /*
     // MARK: - Navigation
 
@@ -75,17 +100,28 @@ class YYQSegmentViewController: UIViewController {
 
 }
 
-extension YYQSegmentViewController: UIScrollViewDelegate {
- 
+extension YYQSegmentViewController: UIScrollViewDelegate,YYQSegmentBarSelectedDelegate {
+
+
+    /// 滚动
+    ///
+    /// - Parameter scrollView: scrollView
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         
         let offset = scrollView.contentOffset.x/ScreenWidth
         showChildVCView(index: Int(offset))
+
+        segmentBar.selectOneButton(index: Int(offset))
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        let offset = scrollView.contentOffset.x/ScreenWidth
+
+    }
+
+    func selectBarIndex(index: Int) {
+
+        showChildVCView(index: index)
     }
 }
 

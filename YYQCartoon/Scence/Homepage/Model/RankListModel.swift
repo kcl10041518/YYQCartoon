@@ -20,7 +20,7 @@ struct RankList {
 }
 struct RankListData {
 
-    var rankinglist:Rank?
+    var rankinglist:[Rank]?
 }
 struct Rank {
 
@@ -49,7 +49,7 @@ extension RankList: Mappable {
     }
     mutating func mapping(map: Map) {
         stateCode <- map["code"]
-        message <- map["code"]
+        message <- map["message"]
         returnData <- map["returnData"]
     }
 }
