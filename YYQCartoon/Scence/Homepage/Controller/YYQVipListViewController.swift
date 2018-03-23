@@ -15,6 +15,7 @@ class YYQVipListViewController: YYQBaseViewController {
 
     let disposeBag = DisposeBag()
     var datasource = [Vip]()
+
     lazy var tableView: UITableView = {
         
         let tableView = UITableView()
@@ -67,7 +68,7 @@ class YYQVipListViewController: YYQBaseViewController {
     */
 
 }
-
+// MARK: UITableViewDelegate UITableViewDataSource
 extension YYQVipListViewController:UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -89,7 +90,11 @@ extension YYQVipListViewController:UITableViewDelegate, UITableViewDataSource {
         return cell!
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 300
+
+        if indexPath.row == 0 {
+            return 540;     //这里的高度没有做屏幕适配
+        }
+        return 300          //这里的高度没有做屏幕适配
     }
     
 }

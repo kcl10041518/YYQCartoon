@@ -15,8 +15,6 @@ class YYQHomePageViewController: YYQSegmentViewController {
         super.viewWillAppear(animated)
 
     }
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,11 +23,9 @@ class YYQHomePageViewController: YYQSegmentViewController {
                           YYQVipListViewController(),
                           YYQSubscribeViewController(),
                           YYQRankListViewController()]
-        
         setUpWithChildViewController(childVCtrs: childCtrs)
         segmentBar.setUpItems(items: items)
-        
-//        self.view.backgroundColor = UIColor.white
+
         // Do any additional setup after loading the view.
     }
 
