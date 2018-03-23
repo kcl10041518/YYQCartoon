@@ -28,11 +28,19 @@ class YYQSubscribeViewCell: UITableViewCell {
         self.collectView.register(UINib.init(nibName: "YYQSubscribeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "YYQSubscribeCollectionViewCell")
         self.collectLayout.itemSize = CGSize(width: (ScreenWidth-50)/3, height: 220)
         self.collectLayout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-//        self.collectView.
+
         self.collectView.isScrollEnabled = false
         // Initialization code
     }
+    func setVipModel(model:Vip)  {
 
+        sectionLabel.text = model.itemTitle
+        self.iconImageView.kf.setImage(with: ImageResource(downloadURL: URL.init(string: model.titleIconUrl!)!),
+                                       placeholder: UIImage(named:"normal_placeholder_h"),
+                                       options: nil,
+                                       progressBlock: nil,
+                                       completionHandler: nil)
+    }
     func setModel(model:Subscribe)  {
 
         self.model = model
@@ -80,8 +88,7 @@ extension YYQSubscribeViewCell:UICollectionViewDelegate,UICollectionViewDataSour
 
     }
 
-
-
-
-
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
