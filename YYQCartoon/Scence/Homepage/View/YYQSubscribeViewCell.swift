@@ -16,6 +16,8 @@ class YYQSubscribeViewCell: UITableViewCell {
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var collectLayout: UICollectionViewFlowLayout!
+
+    /// 可以是对外传进来的数据类型
     var model:AnyObject?
 
     override func awakeFromNib() {
