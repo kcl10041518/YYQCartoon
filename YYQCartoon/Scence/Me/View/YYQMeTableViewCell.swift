@@ -32,7 +32,6 @@ class YYQMeTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-
     override func layoutSubviews() {
         super.layoutSubviews()
 

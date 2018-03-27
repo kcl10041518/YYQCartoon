@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YYQBookstoreViewController: YYQBaseViewController {
+class YYQBookstoreViewController: YYQUITableViewController<Any, YYQBookStoreViewCell> {
 
     override func viewDidLoad() {
         super.viewDidLoad()

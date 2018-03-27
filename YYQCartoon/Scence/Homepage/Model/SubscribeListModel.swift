@@ -77,8 +77,6 @@ extension SubscribeList: Mappable {
     init?(map: Map) {
 
     }
-
-
     mutating func mapping(map: Map) {
         stateCode <- map["stateCode"]
         message <- map["message"]

@@ -14,6 +14,9 @@
 		6619A5D02062845400709E8F /* YYQSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */; };
 		6636069D2068F41800ECDED1 /* YYQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636069C2068F41800ECDED1 /* YYQTableViewController.swift */; };
 		663606A12069DA2100ECDED1 /* YYQMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */; };
+		663606A3206A17D200ECDED1 /* YYQUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663606A2206A17D200ECDED1 /* YYQUIViewController.swift */; };
+		663606A6206A264500ECDED1 /* YYQBookStoreViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663606A5206A264500ECDED1 /* YYQBookStoreViewCell.swift */; };
+		663606A8206A2F8D00ECDED1 /* MyURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663606A7206A2F8D00ECDED1 /* MyURLProtocol.swift */; };
 		6688AE0C2068866500AEC744 /* YYQStrRecmdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6688AE0A2068866500AEC744 /* YYQStrRecmdViewCell.swift */; };
 		6688AE0D2068866500AEC744 /* YYQStrRecmdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6688AE0B2068866500AEC744 /* YYQStrRecmdViewCell.xib */; };
 		668B7CF820633AAE0037D5C4 /* YYQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */; };
@@ -78,6 +81,9 @@
 		6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSegmentViewController.swift; sourceTree = "<group>"; };
 		6636069C2068F41800ECDED1 /* YYQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQTableViewController.swift; sourceTree = "<group>"; };
 		663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQMeTableViewCell.swift; sourceTree = "<group>"; };
+		663606A2206A17D200ECDED1 /* YYQUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQUIViewController.swift; sourceTree = "<group>"; };
+		663606A5206A264500ECDED1 /* YYQBookStoreViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQBookStoreViewCell.swift; sourceTree = "<group>"; };
+		663606A7206A2F8D00ECDED1 /* MyURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyURLProtocol.swift; sourceTree = "<group>"; };
 		6688AE0A2068866500AEC744 /* YYQStrRecmdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQStrRecmdViewCell.swift; sourceTree = "<group>"; };
 		6688AE0B2068866500AEC744 /* YYQStrRecmdViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYQStrRecmdViewCell.xib; sourceTree = "<group>"; };
 		668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQBaseViewController.swift; sourceTree = "<group>"; };
@@ -153,6 +159,14 @@
 			isa = PBXGroup;
 			children = (
 				663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		663606A4206A261300ECDED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				663606A5206A264500ECDED1 /* YYQBookStoreViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -255,6 +269,8 @@
 				66BABF322062451400974FC6 /* YYQGuideViewController.swift */,
 				668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */,
 				6636069C2068F41800ECDED1 /* YYQTableViewController.swift */,
+				663606A2206A17D200ECDED1 /* YYQUIViewController.swift */,
+				663606A7206A2F8D00ECDED1 /* MyURLProtocol.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -384,10 +400,10 @@
 		66BABF402062599400974FC6 /* BookStore */ = {
 			isa = PBXGroup;
 			children = (
+				663606A4206A261300ECDED1 /* View */,
 				66BABF412062599400974FC6 /* ViewModel */,
 				66BABF422062599400974FC6 /* Controller */,
 				66BABF432062599400974FC6 /* Model */,
-				66BABF442062599400974FC6 /* View */,
 			);
 			path = BookStore;
 			sourceTree = "<group>";
@@ -412,13 +428,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		66BABF442062599400974FC6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		842013221D0C7A992360475E /* Pods */ = {
@@ -664,11 +673,14 @@
 				66BABF29206243DA00974FC6 /* YYQHomePageViewController.swift in Sources */,
 				66BABF46206259DF00974FC6 /* YYQBookstoreViewController.swift in Sources */,
 				668B7CF820633AAE0037D5C4 /* YYQBaseViewController.swift in Sources */,
+				663606A8206A2F8D00ECDED1 /* MyURLProtocol.swift in Sources */,
+				663606A6206A264500ECDED1 /* YYQBookStoreViewCell.swift in Sources */,
 				66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */,
 				668B7D04206375390037D5C4 /* YYQRankListViewModel.swift in Sources */,
 				66BABF21206238E800974FC6 /* VipListModel.swift in Sources */,
 				6688AE0C2068866500AEC744 /* YYQStrRecmdViewCell.swift in Sources */,
 				66BABF23206239A100974FC6 /* RecommendList.swift in Sources */,
+				663606A3206A17D200ECDED1 /* YYQUIViewController.swift in Sources */,
 				66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */,
 				6636069D2068F41800ECDED1 /* YYQTableViewController.swift in Sources */,
 				66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */,

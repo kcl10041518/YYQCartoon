@@ -44,7 +44,6 @@ extension Observable {
             for dict:[String :Any] in array {
 
                 if let error = self.parseError(response: dict){
-
                     throw error
                 }
             }
