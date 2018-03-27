@@ -81,9 +81,12 @@ class YYQRecommendViewController: YYQBaseViewController {
 extension YYQRecommendViewController : UITableViewDelegate, UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return self.comicLists.count
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0{
+            return 1;
+        }
         return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

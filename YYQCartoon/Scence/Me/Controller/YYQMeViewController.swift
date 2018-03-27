@@ -7,19 +7,20 @@
 //
 
 import UIKit
-
-class YYQMeViewController: YYQBaseViewController {
+//,
+class YYQMeViewController: TableViewController<Any, YYQMeTableViewCell> {
 
     override func viewWillAppear(_ animated: Bool) {
 
         super.viewWillAppear(animated)
-        setNavigationIsTranslucent(isTranslucent: true)
+//        setNavigationIsTranslucent(isTranslucent: true)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        self.data = ["1","1","1","1","1","1","1","1"];
+        
         // Do any additional setup after loading the view.
     }
 

@@ -12,6 +12,10 @@
 		6602C0F12063ACC100150681 /* YYQSubscribeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */; };
 		6602C0F22063ACC100150681 /* YYQSubscribeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */; };
 		6619A5D02062845400709E8F /* YYQSegmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */; };
+		6636069D2068F41800ECDED1 /* YYQTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6636069C2068F41800ECDED1 /* YYQTableViewController.swift */; };
+		663606A12069DA2100ECDED1 /* YYQMeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */; };
+		6688AE0C2068866500AEC744 /* YYQStrRecmdViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6688AE0A2068866500AEC744 /* YYQStrRecmdViewCell.swift */; };
+		6688AE0D2068866500AEC744 /* YYQStrRecmdViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6688AE0B2068866500AEC744 /* YYQStrRecmdViewCell.xib */; };
 		668B7CF820633AAE0037D5C4 /* YYQBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */; };
 		668B7CFB206346C80037D5C4 /* YYQSegmentBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CFA206346C80037D5C4 /* YYQSegmentBarView.swift */; };
 		668B7CFD20636D190037D5C4 /* YYQDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B7CFC20636D190037D5C4 /* YYQDownloadViewController.swift */; };
@@ -72,6 +76,10 @@
 		6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSubscribeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYQSubscribeCollectionViewCell.xib; sourceTree = "<group>"; };
 		6619A5CF2062845400709E8F /* YYQSegmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSegmentViewController.swift; sourceTree = "<group>"; };
+		6636069C2068F41800ECDED1 /* YYQTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQTableViewController.swift; sourceTree = "<group>"; };
+		663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQMeTableViewCell.swift; sourceTree = "<group>"; };
+		6688AE0A2068866500AEC744 /* YYQStrRecmdViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQStrRecmdViewCell.swift; sourceTree = "<group>"; };
+		6688AE0B2068866500AEC744 /* YYQStrRecmdViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYQStrRecmdViewCell.xib; sourceTree = "<group>"; };
 		668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQBaseViewController.swift; sourceTree = "<group>"; };
 		668B7CFA206346C80037D5C4 /* YYQSegmentBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQSegmentBarView.swift; sourceTree = "<group>"; };
 		668B7CFC20636D190037D5C4 /* YYQDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYQDownloadViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6636069F2069D9D900ECDED1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				663606A02069DA2100ECDED1 /* YYQMeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		668B7CF9206346160037D5C4 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +167,8 @@
 				6602C0EF2063ACC100150681 /* YYQSubscribeCollectionViewCell.swift */,
 				6602C0F02063ACC100150681 /* YYQSubscribeCollectionViewCell.xib */,
 				6694E39A2064DF540049520F /* YYQScrollView.swift */,
+				6688AE0A2068866500AEC744 /* YYQStrRecmdViewCell.swift */,
+				6688AE0B2068866500AEC744 /* YYQStrRecmdViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +254,7 @@
 				66BABF302062443700974FC6 /* YYQNavigationViewController.swift */,
 				66BABF322062451400974FC6 /* YYQGuideViewController.swift */,
 				668B7CF720633AAE0037D5C4 /* YYQBaseViewController.swift */,
+				6636069C2068F41800ECDED1 /* YYQTableViewController.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -289,10 +308,10 @@
 		66BABF362062599400974FC6 /* Me */ = {
 			isa = PBXGroup;
 			children = (
+				6636069F2069D9D900ECDED1 /* View */,
 				66BABF372062599400974FC6 /* ViewModel */,
 				66BABF382062599400974FC6 /* Controller */,
 				66BABF392062599400974FC6 /* Model */,
-				66BABF3A2062599400974FC6 /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -317,13 +336,6 @@
 			children = (
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		66BABF3A2062599400974FC6 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		66BABF3B2062599400974FC6 /* Category */ = {
@@ -537,6 +549,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6688AE0D2068866500AEC744 /* YYQStrRecmdViewCell.xib in Resources */,
 				66BABEE920620B8E00974FC6 /* LaunchScreen.storyboard in Resources */,
 				6602C0EC206393F700150681 /* YYQSubscribeViewCell.xib in Resources */,
 				6602C0F22063ACC100150681 /* YYQSubscribeCollectionViewCell.xib in Resources */,
@@ -654,11 +667,14 @@
 				66BABF312062443700974FC6 /* YYQNavigationViewController.swift in Sources */,
 				668B7D04206375390037D5C4 /* YYQRankListViewModel.swift in Sources */,
 				66BABF21206238E800974FC6 /* VipListModel.swift in Sources */,
+				6688AE0C2068866500AEC744 /* YYQStrRecmdViewCell.swift in Sources */,
 				66BABF23206239A100974FC6 /* RecommendList.swift in Sources */,
 				66BABEE120620B8E00974FC6 /* ViewController.swift in Sources */,
+				6636069D2068F41800ECDED1 /* YYQTableViewController.swift in Sources */,
 				66BABF1D2062381F00974FC6 /* RankListModel.swift in Sources */,
 				66BABEDF20620B8E00974FC6 /* AppDelegate.swift in Sources */,
 				6602C0EB206393F700150681 /* YYQSubscribeViewCell.swift in Sources */,
+				663606A12069DA2100ECDED1 /* YYQMeTableViewCell.swift in Sources */,
 				668B7D0120636D650037D5C4 /* YYQBookListViewController.swift in Sources */,
 				6602C0F12063ACC100150681 /* YYQSubscribeCollectionViewCell.swift in Sources */,
 				66BABF48206259F000974FC6 /* YYQCategoryViewController.swift in Sources */,

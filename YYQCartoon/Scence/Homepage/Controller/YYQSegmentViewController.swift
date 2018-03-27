@@ -17,7 +17,6 @@ class YYQSegmentViewController: YYQBaseViewController {
     }()
 
     lazy var contentView: UIScrollView = {
-
         let contentView = UIScrollView()
         contentView.delegate = self
         contentView.isPagingEnabled = true
